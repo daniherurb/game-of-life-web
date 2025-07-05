@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Life</title>
+    <link rel="icon" href="/media/icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <button id="restart" class="restart">
+            <img src="media/refresh.svg" alt="Restart" width="30" height="30">
+        </button>
+        <button id="info-button" class="info">
+            <img src="media/info.svg" alt="Info" width="30" height="30">
+        </button>
+        <div id="info-text" class="info-text show">
+            Welcome to my implementation of <b>Conway's Game of Life!</b><br>
+            <p></p>
+            It represents a zero-player game where evolution is
+            determined by the initial state, requiring no input.<br>
+            <p></p>
+            Rules are:<br>
+            <b>1.</b> Any live cell with fewer than two live neighbors dies (underpopulation).<br>
+            <b>2.</b> Any live cell with two or three live neighbors lives on to the next generation
+            (survival).<br>
+            <b>3.</b> Any live cell with more than three live neighbors dies (overpopulation).<br>
+            <b>4.</b> Any dead cell with exactly three live neighbors becomes a live cell (reproduction).<br>
+            <p></p>
+            This game was first presented to me by my dearest friend <a href="https://github.com/gonzalinux">@gonzalinux</a>, 
+            and I have found it fascinating ever since. I hope you like it!<br>
+
+        </div>
+        <h1 class="title"><u>GAME OF LIFE</u></h1>
+        <table id="table" class="table"></table>
+        <div class="footer">From the desk of <a href="https://github.com/daniherurb">@daniherurb</a></div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

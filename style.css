@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+body {
+    background-color: #FCFCFC;
+    overflow: hidden;
+}
+
+.title {
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    font-size: 34px;
+    font-family: 'Oswald', sans-serif;
+    color: #0130AA;
+    animation: fromUp 0.7s ease-in-out;
+}
+
+.table {
+    width: 520px;
+    height: 520px;
+    align-self: center;
+    justify-self: center;
+    animation: appear 0.5s ease-in-out;
+}
+
+.restart {
+    all: unset;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: all 0.2s ease-out; 
+    animation: fromLeft 0.5s ease-in-out;
+}
+
+.restart:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+
+.info {
+    all: unset;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #0130AA;
+    transition: all 0.2s ease-out; 
+    animation: fromRight 0.5s ease-in-out;
+}
+
+.info:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+
+.animation {
+    animation: spin 1s;
+}
+
+.show {
+    display: none;
+}
+
+.info-text {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 270px;
+    height: fit-content;
+    padding: 15px;
+    background-color: #0130AA;
+    border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    color: #FCFCFC;
+    text-decoration: none;;
+}
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    color: #0130AA;
+}
+
+a:visited {
+    color: inherit;
+}
+
+@keyframes spin { 
+    from { 
+        transform: rotate(0deg); 
+    } to { 
+        transform: rotate(360deg); 
+    }
+}
+
+@keyframes fromUp {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+    
+}
+
+@keyframes fromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+    
+}
+
+@keyframes fromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+    
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 550px) {
+    .table {
+        width: 300px;
+        height: 300px;
+        font-size: 14px;
+    }
+
+    .info-text {
+    top: 50px;
+    }
+
+    .title {
+        margin-top: 20vh;
+    }
+}
